@@ -1,0 +1,7 @@
+version: '2'
+services:
+  sqli-union:
+    build: .
+    ports:
+     - "80:5000"
+     - "1337:1337"

